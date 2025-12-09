@@ -20,8 +20,8 @@ This software simulates the behavior of a two-layer heterojunction solar cell by
 ## Quick Start
 
 1. **Prepare your input files** (CSV format):
-   - `REFLECTANCE.csv` - Spectral reflectance data
-   - `Transmitancia.csv` - Spectral transmittance data
+   - `Reflectance.csv` - Spectral reflectance data
+   - `Transmittance.csv` - Spectral transmittance data
    - `ESAM.csv` - Solar spectrum photon flux (AM1.5 standard)
 
 2. **Run the calculator**:
@@ -34,8 +34,8 @@ This software simulates the behavior of a two-layer heterojunction solar cell by
 ## Example Data
 
 This repository includes example datasets for testing:
-- **REFLECTANCE.csv**: Sample reflectance spectrum
-- **Transmitancia.csv**: Sample transmittance spectrum
+- **Reflectance.csv**: Sample reflectance spectrum
+- **Transmittance.csv**: Sample transmittance spectrum
 - **ESAM.csv**: AM1.5 solar spectrum data
 
 The AM1.5 solar spectrum is the standard reference defined by NREL:  
@@ -52,7 +52,7 @@ wavelength_2, value_2
 ...
 ```
 
-**Example** (`REFLECTANCE.csv`):
+**Example** (`Reflectance.csv`):
 ```
 280, 0.057784785
 280.5, 0.057529785
@@ -150,8 +150,8 @@ my_materials = MaterialProperties(
 # Run calculator with custom properties
 calculator = SolarCellCalculator(my_materials)
 voltage, current = calculator.calculate_iv_characteristics(
-    'REFLECTANCE.csv',
-    'Transmitancia.csv',
+    'Reflectance.csv',
+    'Transmittance.csv',
     'ESAM.csv'
 )
 ```
